@@ -6,16 +6,15 @@
 #  - Do not print anything extraneous!
 #  - Do not put anything but pass in main()
 
-def capitalize_nested(nested_list):
-    new = []
-    for each in nested_list:
-        if isinstance(each, list):
-            new.append(capitalize_nested(each))
+def match_ends(words):
+    count = 0
+
+    for each in words:
+        if len(each) >= 2 and each[0] == each[len(each)-1]:
+            count += 1
         else:
-            new.append(each.upper())
-    return new
-
-
+            count += 0
+    return count
 
     
 
@@ -23,7 +22,7 @@ def capitalize_nested(nested_list):
 ##############################################################################
 def main():
     pass  # Call your function(s) here.
-    print(capitalize_nested(['apple', ['bear'], 'cat']))
+    print(match_ends(['aba', 'xyz', 'aa', 'x', 'bbb']))
 
 if __name__ == '__main__':
     main()

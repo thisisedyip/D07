@@ -6,3 +6,23 @@
 # In your final submission:
 #  - Do not print anything extraneous!
 #  - Do not put anything but pass in main()
+
+def cumusum(flatlist):
+	new = []
+	total = 0
+
+	for each in flatlist:
+		total += each
+		new.append(total)
+	return new
+	
+
+
+##############################################################################
+def main():
+    pass  # Call your function(s) here.
+    print(cumusum([1,4,6,7]))
+
+if __name__ == '__main__':
+    main()
+
